@@ -24,46 +24,28 @@ wheels/
 venv_env/
 venv/
 ENV/
-.venv/
+env/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
 # Jupyter Notebook
-.ipynb_checkpoints/
+.ipynb_checkpoints
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Data files (large files that shouldn't be in git)
+# Data files (large)
 *.csv
+*.dat
 *.nc
-*.nc4
-*.h5
-*.hdf5
-data_*.csv
-nino*.csv
-sst*.nc
+data/
 
-# Output results (generated, can be reproduced)
-05_输出结果/*.png
-05_输出结果/*.txt
-05_输出结果/*.log
-enso_analysis_results.png
+# Generated outputs (users will generate their own)
+!load/image/*.png
 
-# OS generated files
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # Logs
@@ -73,11 +55,3 @@ logs/
 # Temporary files
 *.tmp
 *.temp
-*.bak
-*.swp
-*~
-
-# Package files
-*.zip
-*.tar.gz
-*.rar

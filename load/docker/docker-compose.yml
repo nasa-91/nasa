@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  enso-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: enso-bayesian-analysis:v2.0
+    container_name: enso-bayesian-analysis
+    volumes:
+      # 挂载数据目录
+      - ./data:/app/data:ro
+      # 挂载输出目录（容器内结果会保存到主机）
+      - ./outputs:/app/outputs
+      # 挂载配置文件（可选）
+      - ./config.json:/app/config.json:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      python cli.py 
+      --data data/nino34.csv
+      --states 3
+      --iterations 5000
+      --output outputs/
+      --verbose
+    restart: "no"
+    
+  # 可选：Jupyter Notebook交互式环境
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: enso-bayesian-analysis:v2.0
+    container_name: enso-jupyter
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      bash -c "pip install jupyterlab && 
+               jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+    profiles:
+      - interactive
+
+# 使用说明：
+#
+# 基本用法：
+#   docker-compose up enso-analysis
+#
+# 使用配置文件运行：
+#   修改config.json后执行：
+#   docker-compose up enso-analysis
+#
+# 启动Jupyter Notebook（用于交互式分析）：
+#   docker-compose --profile interactive up jupyter
+#   然后在浏览器打开 http://localhost:8888
+#
+# 查看输出：
+#   ls outputs/
+#   cat outputs/analysis_results.txt
+#
+# 清理容器：
+#   docker-compose down
+#   docker-compose down -v  # 同时删除数据卷

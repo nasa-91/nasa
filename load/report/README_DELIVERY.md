@@ -195,25 +195,25 @@ The observed asymmetries are consistent with:
 
 ## Quality Assurance
 
-✅ **Code Quality:**
+**Code Quality:**
 - Comprehensive type hints
 - Robust error handling
 - Numerical stability guarantees
 - Edge case handling (small samples)
 
-✅ **Statistical Rigor:**
+**Statistical Rigor:**
 - Bayesian inference with proper priors
 - MCMC convergence diagnostics (R-hat < 1.2 acceptable)
 - Bootstrap confidence intervals (95% level)
 - Multiple information criteria for model selection
 
-✅ **Visualization Standards:**
+**Visualization Standards:**
 - Publication-quality resolution (300 DPI)
 - Professional color schemes (colorblind-friendly)
 - Clear bilingual labels (English primary)
 - Complete statistical annotations
 
-✅ **Reproducibility:**
+**Reproducibility:**
 - Fixed random seeds for reproducibility
 - Documented dependencies
 - Version-controlled environment
@@ -245,6 +245,6 @@ Data Source: NOAA ERSST v5 NINO3.4 Index (1950-2024)
 
 ---
 
-**Document Version:** 1.0  
-**Date:** 2026-05-08  
-**Status:** Ready for Submission ✅
+**Document Version:** 1.0
+**Date:** 2026-05-08
+**Status:** Ready for Submission

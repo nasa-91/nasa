@@ -1,0 +1,46 @@
+# Docker构建时忽略的文件和目录
+
+# Git相关
+.git
+.gitignore
+
+# Python缓存
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv_env/
+.venv/
+env/
+venv/
+
+# IDE配置
+.vscode/
+.idea/
+
+# 输出目录（运行时生成）
+outputs/
+*.png
+*.txt
+
+# 数据文件（通过volume挂载）
+data/*.csv
+data/*.txt
+data/*.nc
+
+# 文档（可选）
+docs/
+CODE_IMPROVEMENTS.md
+
+# 测试报告
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
