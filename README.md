@@ -2,7 +2,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-4.0-green.svg)](https://github.com/your-repo)
+[![Version](https://img.shields.io/badge/version-4.0-green.svg)](https://github.com/nasa-91/nasa)
 
 A professional-grade Bayesian Hidden Markov Model (HMM) system for analyzing El Nino-Southern Oscillation (ENSO) asymmetry and dynamics.
 
@@ -80,7 +80,7 @@ enso-bayesian-hmm/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/enso-bayesian-hmm.git
+git clone https://github.com/nasa-91/nasa.git
 cd enso-bayesian-hmm
 
 # Navigate to core package
@@ -394,10 +394,9 @@ If you use this software in your research, please cite:
 ```bibtex
 @software{enso_bayesian_hmm,
   title={ENSO Bayesian HMM Analysis System},
-  author={Your Name},
   year={2025},
   version={4.0},
-  url={https://github.com/your-repo/enso-bayesian-hmm}
+  url={https://github.com/nasa-91/nasa}
 }
 ```
 
@@ -434,6 +433,5 @@ If you use this software in your research, please cite:
 
 ---
 
-**Last Updated**: 2025-01-19  
-**Maintainer**: Your Name  
+**Last Updated**: 2026-05-18
 **Status**: Production Ready
